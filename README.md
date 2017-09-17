@@ -3,11 +3,33 @@ A tiny bot for discord chat, still under progress.
 
 
 ## Installation
-1. create a `config.json` file
+prerequisites: Node.js >= 7.0.0
+1. follow the examples in config.json.example and create a `config.json` file
 2. run these commands in CLI
 ```bash
 npm install
-npm start
+nodemon --harmony bot.js
+```
+## Deployment
+prerequisites: heroku CLI installed
+1. comment out `# config.json` in `.gitignore`
+2. run these commands in CLI
+```bash
+heroku create your-app-name
+git add .
+git commit -m "deploy to heroku"
+git push heroku master
+```
+3. go to Heroku Dashboard and navigate  ***Personal apps > your-app-name > Resources***
+4. disable dyno `web` and enable dyno `bot`
+5. invite your bot to your server if haven't. Change the client-id and go to this link
+```
+https://discordapp.com/oauth2/authorize?&client_id=<your-client-id>&scope=bot&permissions=0
+```
+6. Test your app and check logs
+```
+heroku ps
+heroku logs -t
 ```
 
 

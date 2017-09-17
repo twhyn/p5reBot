@@ -6,7 +6,7 @@
   "description": "small Bot test",
   "main": "bot.js",
   "scripts": {
-    "start": "nodemon --harmony bot.js"
+    "start": "node --harmony bot.js"
   },
   "engines": {
     "node": ">=8.0.0"

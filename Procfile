@@ -1,0 +1,1 @@
+bot: node --harmony bot.js
